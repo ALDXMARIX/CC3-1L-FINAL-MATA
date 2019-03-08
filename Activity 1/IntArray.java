@@ -14,7 +14,7 @@ public class IntArray {
 		for (i = 1; i <= 5; i++) {
 
 			// succeeding processes
-			System.out.println("Enter Element " + i + " :");
+			System.out.print("Enter an integer: ");
 			input = s.nextInt();
 			myArray[i - 1] = input;
 
@@ -25,17 +25,17 @@ public class IntArray {
 
 		for (i = 0; i < 5; i++) {
 
-			toString = toString + myArray[i];
+			toString = toString + " " + myArray[i];
 		}
 
-		System.out.println("First to Last : " + toString);
+		System.out.println("First to Last : " + toString + " ");
 
 		for (i = 4; i >= 0; i--) {
 
-			toString2 = toString2 + myArray[i];
+			toString2 = toString2 + " " + myArray[i];
 		}
 
-		System.out.println("Last to First " + toString2);
+		System.out.println("Last to First : " + toString2 + " ");
 
 	}
 }

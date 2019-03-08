@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Prices {
 
 	static double total, sumElements, average, sum, input;
+	static int newCounter = 0;
 
 	public static void main(String[] args) {
 
@@ -29,10 +30,10 @@ public class Prices {
 			total = myArray[i] + total;
 		}
 
-		System.out.println("Sum = " + total);
+		System.out.println("Sum = " + df.format(total));
 
 		average = total / myArray.length;
-		System.out.println("Average = " + average);
+		System.out.println("Average = " + df.format(average));
 
 		int counterFive = 0;
 
@@ -52,7 +53,7 @@ public class Prices {
 			}
 		}
 
-		System.out.print("The values less than 5 are : ");
+		System.out.print("The values less than $5 are : ");
 
 		for (i = 0; i < lessFive.length; i++) {
 			System.out.print(" $" + df.format(lessFive[i]));
@@ -66,14 +67,13 @@ public class Prices {
 
 		for (i = 0; i < 20; i++) {
 			if (myArray[i] > average) {
-				myCounter++;
+				newCounter++;
 			}
 		}
 
-		double[] higherAverage = new double[myCounter];
+		double[] higherAverage = new double[newCounter];
 
-		for (i = 0; i < myCounter; i++) {
-
+		for (i = 0; i < 20; i++) {
 			if (myArray[i] > average) {
 				higherAverage[j] = myArray[i];
 				j++;
@@ -83,7 +83,7 @@ public class Prices {
 		System.out.println("");
 		System.out.print("The values higher than the average are : ");
 
-		for (i = 0; i < higherAverage.length / 2; i++) {
+		for (i = 0; i < higherAverage.length; i++) {
 			System.out.print(" $" + df.format(higherAverage[i]));
 
 		}

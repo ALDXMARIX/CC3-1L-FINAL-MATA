@@ -2,12 +2,12 @@ import javax.swing.JOptionPane;
 
 public class PizzaChoice {
 
-	String input, size;
-	static String PizzaChoice;
-	static String thePrice;
-	private static boolean wrongInput;
-
 	public static void main(String[] args) {
+
+		String input, size;
+		String PizzaChoice;
+		String thePrice;
+		boolean wrongInput;
 
 		System.out.println("Welcome to PizzaHub");
 
@@ -41,6 +41,7 @@ public class PizzaChoice {
 	}
 
 	public static String getPizzaPrice(String size) {
+		String thePrice = "";
 		String PizzaSize[] = { "S", "M", "L", "X" };
 		String prices[] = { "$6.99", "$8.99", "$12.50", "$15.00" };
 
@@ -48,7 +49,6 @@ public class PizzaChoice {
 			if (size.equals(PizzaSize[i])) {
 				thePrice = prices[i];
 			}
-
 		}
 		return thePrice;
 
